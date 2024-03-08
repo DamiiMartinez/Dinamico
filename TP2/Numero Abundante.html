@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function EsAbundante(n){
+                let i;
+                let count=0;
+                let resultado=false;
+                for(i=0; i<=n; i++){
+                    if(n%i==0 && i<n){
+                        count=count+i;
+                    }
+                }
+                if(count>n){
+                    resultado=true;
+                }
+                return resultado;
+            }
+            let num;
+            num=parseInt(prompt("Ingrese un numero " + " "));
+            if(EsAbundante(num)){
+                document.write("Es abundante");
+            }
+            else{
+                document.write("No es abundante");
+            }
+        </script>
+    </body>
+</html>
