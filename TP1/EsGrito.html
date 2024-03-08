@@ -1,0 +1,31 @@
+<html>
+	<head>		
+	</head>
+	<body>
+		<script>
+			function EsGrito( texto ){
+				let i;
+				let esgrito=0;
+				let escrito=0;
+				let l='esgrito';
+				for(i=0; i<texto.length; i++){
+					if(texto.charAt(i) == '!'){
+						esgrito++;
+					}
+					else{
+						escrito++;
+					}
+				}
+				if(escrito>esgrito){
+					l='escrito';
+				}
+				return l;
+			}
+			let t;
+			t=prompt('Ingrese un texto ' + ' ');
+			t=t.replaceAll(/[0-9]/g, "");
+			t=t.replaceAll(/[.,/#$%^&*;:{}=-_`~()¿?]/g, "");
+			document.write( EsGrito(t) );
+		</script>
+	</body>
+</html>
