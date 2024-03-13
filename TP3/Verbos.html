@@ -1,0 +1,191 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            //PASADO
+            function pasadoYo(p){
+                let palabra;
+                p=p.replace('ar P', 'e');
+                p=p.replace('er P', 'i');
+                p=p.replace('ir P', 'i');
+                palabra='Yo '.concat(p);
+                return palabra;
+            }
+            function pasadoTu(p){
+                let palabra;
+                p=p.replace('ar P', 'aste');
+                p=p.replace('er P', 'iste');
+                p=p.replace('ir P', 'iste');
+                palabra='Tu '.concat(p);
+                return palabra;
+            }
+            function pasadoEl(p){
+                let palabra;
+                p=p.replace('ar P', 'o');
+                p=p.replace('er P', 'io');
+                p=p.replace('ir P', 'io');
+                palabra='El '.concat(p);
+                return palabra;
+            }
+            function pasadoNosotros(p){
+                let palabra;
+                p=p.replace('ar P', 'amos');
+                p=p.replace('er P', 'imos');
+                p=p.replace('ir P', 'imos');
+                palabra='Nosotros '.concat(p);
+                return palabra;
+            }
+            function pasadoVosotros(p){
+                let palabra;
+                p=p.replace('ar P', 'asteis');
+                p=p.replace('er P', 'isteis');
+                p=p.replace('ir P', 'isteis');
+                palabra='Vosotros '.concat(p);
+                return palabra;
+            }
+            function pasadoEllxs(p){
+                let palabra;
+                p=p.replace('ar P', 'arxn');
+                p=p.replace('er P', 'ierxn');
+                p=p.replace('ir P', 'ierxn');
+                palabra='Ellxs '.concat(p);
+                return palabra;
+            }
+
+
+            //PRESENTE
+            function presenteYo(p){
+                let palabra;
+                p=p.replace('ar A', 'o');
+                p=p.replace('er A', 'o');
+                p=p.replace('ir A', 'o');
+                palabra='Yo '.concat(p);
+                return palabra;
+            }
+            function presenteTu(p){
+                let palabra;
+                p=p.replace('ar A', 'as');
+                p=p.replace('er A', 'es');
+                p=p.replace('ir A', 'es');
+                palabra='Tu '.concat(p);
+                return palabra;
+            }
+            function presenteEl(p){
+                let palabra;
+                p=p.replace('ar A', 'a');
+                p=p.replace('er A', 'e');
+                p=p.replace('ir A', 'e');    
+                palabra='El '.concat(p);
+                return palabra;
+            }
+            function presenteNosotros(p){
+                let palabra;
+                p=p.replace('ar A', 'amos');
+                p=p.replace('er A', 'emos');
+                p=p.replace('ir A', 'imos');
+                palabra='Nosotros '.concat(p);
+                return palabra;
+            }
+            function presenteVosotros(p){
+                let palabra;
+                p=p.replace('ar A', 'ais');
+                p=p.replace('er A', 'eis');
+                p=p.replace('ir A', 'is');
+                palabra='Vosotros '.concat(p);
+                return palabra;
+            }
+            function presenteEllxs(p){
+                let palabra;
+                p=p.replace('ar A', 'xn');
+                p=p.replace('er A', 'xn');
+                p=p.replace('ir A', 'xn');
+                palabra='Ellxs '.concat(p);
+                return palabra;
+            }
+
+
+            //FUTURO
+            function futuroYo(p){
+                let palabra;
+                p=p.replace('ar F', 'are');
+                p=p.replace('er F', 'ere');
+                p=p.replace('ir F', 'ire');
+                palabra='Yo '.concat(p);
+                return palabra;
+            }
+            function futuroTu(p){
+                let palabra;
+                p=p.replace('ar F', 'aras');
+                p=p.replace('er F', 'eras');
+                p=p.replace('ir F', 'iras');
+                palabra='Tu '.concat(p);
+                return palabra;
+            }
+            function futuroEl(p){
+                let palabra;
+                p=p.replace('ar F', 'ara');
+                p=p.replace('er F', 'era');
+                p=p.replace('ir F', 'ira');
+                palabra='El '.concat(p);
+                return palabra;
+            }
+            function futuroNosotros(p){
+                let palabra;
+                p=p.replace(' F', '');
+                palabra='Nosotros '.concat(p+'emos');
+                return palabra;
+            }
+            function futuroVosotros(p){
+                let palabra;
+                p=p.replace(' F', '');
+                palabra='Vosotros '.concat(p+'eis');
+                return palabra;
+            }
+            function futuroEllxs(p){
+                let palabra;
+                p=p.replace('ar F', 'arxn');
+                p=p.replace('er F', 'erxn');
+                p=p.replace('ir F', 'irxn');
+                palabra='Ellxs '.concat(p);
+                return palabra;
+            }
+
+            let posicion=0;
+            let palabra;
+            let letra;
+            palabra=prompt("Ingreasa una palabra " + " ");
+            posicion=palabra.length-1;
+            letra=palabra.slice(posicion);
+            switch(letra){
+                case 'P':{
+                    document.write( pasadoYo(palabra) + '<br>' + 
+                                    pasadoTu(palabra) + '<br>' + 
+                                    pasadoEl(palabra) + '<br>' + 
+                                    pasadoNosotros(palabra) + '<br>' + 
+                                    pasadoVosotros(palabra) + '<br>' + 
+                                    pasadoEllxs(palabra) + '<br>' );
+                    break;
+                }
+                case 'A':{
+                    document.write( presenteYo(palabra) + '<br>' + 
+                                    presenteTu(palabra) + '<br>' + 
+                                    presenteEl(palabra) + '<br>' +
+                                    presenteNosotros(palabra) + '<br>' + 
+                                    presenteVosotros(palabra) + '<br>' + 
+                                    presenteEllxs(palabra) + '<br>' );
+                    break;
+                }
+                case 'F':{
+                    document.write( futuroYo(palabra) + '<br>' + 
+                                    futuroTu(palabra) + '<br>' + 
+                                    futuroEl(palabra) + '<br>' + 
+                                    futuroNosotros(palabra) + '<br>' + 
+                                    futuroVosotros(palabra) + '<br>' + 
+                                    futuroEllxs(palabra) + '<br>' );
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>
