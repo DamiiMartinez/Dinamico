@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cantidadDiasAnioNuevo( f ){
+            let an = new Date(2025, 0, 1);
+            let anioNuevo = Date.parse( an );
+            return (anioNuevo - f);
+        }
+        function cantidadMesesCampeon( f ){
+			let cm = new Date(2022, 11, 18);
+			let campion = Date.parse( cm );
+			return (f - campion);
+        }
+        function cantidadAniosNacimiento( f ){
+			let can = new Date(2006, 4, 8);
+			let nacimiento = Date.parse( can );
+			return (f - nacimiento);
+        }
+		let Fecha = new Date();
+		let fech = Date.parse( Fecha );
+		let anioNuevo = cantidadDiasAnioNuevo( fech )/86400000;
+		let campion = cantidadMesesCampeon( fech )/86400000/30;
+		let nacimiento = cantidadAniosNacimiento( fech )/86400000/365;
+        document.write('Cantidad de Dias para Año Nuevo: ' +  anioNuevo);
+        document.write('<br>' + 'Cantidad de Meses desde el Mundial: ' +  campion);
+        document.write('<br>' + 'Cantidad de Años desde que mi Nacimiento: ' +  nacimiento);
+    </script>
+</body>
+</html>
