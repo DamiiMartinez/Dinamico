@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function moda(v, l){
+            let i;
+            let ref=v[0];
+            let count1=0;
+            let count2=0;
+            for( i=0; i<l; i++ ){
+                if(ref==v[i+1] || ref==v[i-1] && ref==v[i]){
+                    count1++;
+                }
+                else if(v[i]!=ref && v[i]==v[i+1] || v[i]==v[i-1]){
+                    count2++;
+                }
+
+                if(count2>count1){
+                    ref=v[i];
+                    count1=count2;
+                    count2=0;
+                }
+                else if(v[i]!=v[i+1]){
+                    count2=0;
+                }
+            }
+            document.write(ref);
+        }
+        let a, i, b;
+        let valores = [];
+        a = parseInt( prompt('Ingresar numero: ' + ' ') );
+        b = prompt(' ');
+        b = b.replaceAll(" ", "");
+        if(b.length==a){
+            for(i=0; i<a; i++){
+                valores[i]= parseInt(b.charAt(i));
+            }
+        }
+        valores.sort();
+        moda(valores, a);
+    </script>
+</body>
+</html>
