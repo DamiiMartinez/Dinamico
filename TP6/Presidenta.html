@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        function esPrimo(n){
+            let i, sum;
+            let count = 0;
+            let resultado = true;
+            for(i=0; i<=n; i++){
+                if( n%i==0 ){    count++;    }
+            }
+            if( count>2 ){    resultado = false;    }
+            return resultado;
+        }
+        
+        function SumaDigitos(s) {
+            let sum1 = s.toString();
+            let sum2 = 0;
+            for (let i = 0; i < sum1.length; i++) {
+                sum2 += parseInt(sum1.charAt(i));
+            }
+            return sum2;
+        }
+        let count = 0;
+        let primo = [];
+        let a=0, b=0, i, rango, r;
+        rango = prompt('Ingrese numero: ' + ' ');
+        a = parseInt( rango.slice(0) );
+        b = parseInt( rango.replace(a, ' ') );
+        for(i=a; i<=b; i++){
+            r = SumaDigitos(i);
+            if( esPrimo(i) && esPrimo(r) ){
+                primo[count] = i;
+                document.write(primo[count] + ' ');
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>
