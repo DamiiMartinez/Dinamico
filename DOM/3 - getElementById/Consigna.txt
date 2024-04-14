@@ -1,0 +1,2 @@
+Permitir cambiar el tama�o de la fuente de un p�rrafo. 
+Para esto crear tres botones (fuente peque�a (10), fuente mediana(13) y fuente grande(20))
