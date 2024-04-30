@@ -2,7 +2,6 @@ function ingresarSemilla(){
     let semilla = parseInt(document.getElementById("semilla").value);
     let array = [semilla];
     let numero = 0;
-    let count = 1;
 
     for(let i=0; i<array.length; i++){
         if( semilla == 1 ){ }
