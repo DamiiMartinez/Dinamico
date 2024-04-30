@@ -21,24 +21,3 @@ function ingresarSemilla(){
     }
     alert(array);
 }
-
-/*
-
-    while(p == false){
-        if( semilla%2 == 0 ){
-            numero = semilla/2;
-            let vector1 = array.push(numero);
-        }
-        else{
-            numero = semilla*2;
-            numero = numero+1;
-            let vector2 = array.push(semilla);
-        }
-        if( semilla == 1 ){
-            p = false;
-        }
-        semilla = array[count];
-        count++;
-    }
-
-*/
