@@ -10,7 +10,7 @@ function ingresarSemilla(){
                 numero = semilla/2;
                 let vector1 = array.push(numero);
             }
-            else if( semilla%2 != 0 ){
+            if( semilla%2 != 0 ){
                 numero = semilla*3;
                 numero = numero+1;
                 let vector2 = array.push(numero);
