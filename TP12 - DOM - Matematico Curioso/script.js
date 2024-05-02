@@ -18,7 +18,7 @@ function verificar( semilla, array ){
         numero = semilla/2;
         let vector1 = array.push(numero);
     }
-    if( semilla%2 != 0 ){
+    else{
         numero = semilla*3;
         numero = numero+1;
         let vector2 = array.push(numero);
