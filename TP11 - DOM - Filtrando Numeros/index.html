@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="archivo">
+    <br>
+    <br>
+    <script>
+        function filtranum(numeros, resultado){
+            let count = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                let numero = numeros[i];
+                if (numero.charAt(0) === numero.charAt(numero.length - 1)) {
+                    count++;
+                    let num = parseInt(numero);
+                    let vector = resultado.push(numero);
+                }
+            }
+            document.getElementById('texto').innerHTML =    '<br>' + numeros + 
+                                                            '<br>' + '<br>' + count + 
+                                                            '<br>' + resultado;
+        }
+
+        function SubTarea7(numeros, resultado){
+            if(numeros.length == 1){
+                EsError();
+            }
+            else{
+                filtranum(numeros, resultado);
+            }
+        }
+
+        function SubTarea6(numeros, resultado){
+            let bandera = false;
+            for(let i = 0; i <= numeros.length; i++){
+                if(numeros[i] >= 100){
+                    bandera = true;
+                }
+            }
+            if(bandera == true){
+                SubTarea7(numeros, resultado);
+            }
+            else{
+                EsError();
+            }
+        }
+
+        function SubTarea5(numeros, resultado){
+            if(numeros.length == 1 && numeros[0] <= 100){
+                EsError();
+            }
+            else{
+                SubTarea6(numeros, resultado);
+            }
+        }
+
+        function SubTarea4(numeros, resultado){
+            let bandera = false;
+            for(let i = 0; i <= numeros.length; i++){
+                if(numeros[i] >= 20){
+                    bandera = true;
+                }
+            }
+            if(bandera == true){
+                SubTarea5(numeros, resultado);
+            }
+            else{
+                EsError();
+            }
+        }
+
+        function SubTarea3(numeros, resultado){
+            if(numeros.length == 1 && numeros[0] <= 20){
+                EsError();
+            }
+            else{
+                SubTarea4(numeros, resultado);
+            }
+        }
+
+        function SubTarea2(numeros, resultado){
+            let bandera = false;
+            for(let i = 0; i <= numeros.length; i++){
+                if(numeros[i] >= 10){
+                    bandera = true;
+                }
+            }
+            if(bandera == true){
+                SubTarea3(numeros, resultado);
+            }
+            else{
+                EsError();
+            }
+        }
+
+        function SubTarea1(numeros, resultado){
+            if(numeros.length == 1 && numeros[0] <= 10){
+                EsError();
+            }
+            else{
+                SubTarea2(numeros, resultado);
+            }
+        }
+
+        function EsError(){
+            alert('Error');
+        }
+
+        const archivo = document.getElementById('archivo');
+        archivo.addEventListener('change', (event) => {
+            let archivoLector = event.target.files[0];
+            let lector = new FileReader();
+            lector.onload = function(){
+                let datos = lector.result;
+                let arrayNumeros = datos.split(' ');
+                let arrayResultado = [];
+
+                SubTarea1(arrayNumeros, arrayResultado);
+            };
+            lector.readAsText(archivoLector);
+        });
+    </script>
+    <p id="texto"></p>
+</body>
+</html>
