@@ -17,14 +17,16 @@
                 }
                 return resultado;
             }
+			let i;
             let num;
+            let n = 0;
             num=parseInt(prompt("Ingrese un numero " + " "));
-            if(EsAbundante(num)){
-                document.write("Es abundante");
-            }
-            else{
-                document.write("No es abundante");
-            }
+			for(i=0; i<=num; i++){
+                n = i;
+				if( EsAbundante(n) ){
+					document.write(n + '<br>')
+				}
+			}
         </script>
     </body>
 </html>
